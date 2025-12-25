@@ -12,7 +12,6 @@ on:
         type : string
         required : true
       
-      
 
 
 jobs:
@@ -25,4 +24,5 @@ jobs:
     runs-on: ubuntu-latest
     if: ${{ github.event.inputs.run_job == 'true' }}
     steps:
-      - run: echo "Printing Custom Message : ${{ github.events.inputs.custom_message}}"
+      - run: |
+          echo "Printing Custom Message : ${{ github.events.inputs.custom_message}}"
