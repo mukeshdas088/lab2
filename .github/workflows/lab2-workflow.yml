@@ -21,7 +21,6 @@ jobs:
 
   job2:
     runs-on: ubuntu-latest
-    if: ${{ github.event.inputs.run_job == 'true' || github.event.inputs.run_job == true }}
     steps:
       - name: Print Message
         run: |
